@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natalia de los Ríos - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="Assets/cuervo-1.png">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <!-- Search Form -->
+    <form class="search-form">
+      <input type="text" placeholder="Search for items..." aria-label="Search">
+      <button type="submit">
+        <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search Icon">
+      </button>
+    </form>
+      <!-- Dark and Light modes -->
+      <button id="themeToggle">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon" style="display:none;">🌙</span>
+    </button>
+    
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Natalia de los Ríos</h1>
+    <p>Designer and Full Stack Developer</p>
+  </section>
+
+
+<!-- Cards Section with different modal content -->
+<section class="cards-container">
+  <!-- Card 1 ABOUT ME-->
+  <div class="card" data-title="About Me" data-content="This is the About section. Learn more about our mission and values.">
+    <img src="Assets/file-and-folder-1.png" alt="Image representing About Me" class="card-image">
+    <h2>About Me</h2>
+    <p>Learn more about our mission and values.</p>
+    <span class="more-info">More info</span>
+  </div>
+  
+  <!-- Card 2 PORTFOLIO -->
+  <div class="card" data-title="Our Portfolio" data-content="Explore our portfolio. Check out our completed projects.">
+    <img src="Assets/file-and-folder-1.png" alt="Image representing Portfolio" class="card-image">
+    <h2>Portfolio</h2>
+    <p>Check out our completed projects.</p>
+    <span class="more-info">More info</span>
+  </div>
+  
+  <!-- Card 3 CONTACT -->
+  <div class="card" data-title="Contact Us" data-content="Get in touch with us. We'd love to hear from you!">
+    <img src="Assets/file-and-folder-1.png" alt="Image representing Contact Us" class="card-image">
+    <h2>Contact</h2>
+    <p>We'd love to hear from you!</p>
+    <span class="more-info">More info</span>
+  </div>
+</section>
+
+
+<!--
+<!-- Cards Section with different modal content 
+<section class="cards-container">
+  <!-- Card 1 ABOUT ME
+  <div class="card" data-title="About Me" data-content="This is the About section. Learn more about our mission and values.">
+    <img src="Assets/file-and-folder-1.png" alt="Image 1" class="card-image">
+    <h2>About Me</h2>
+    <p>Card description goes here.</p>
+    
+    <span>More info</span>
+  </div>
+  <!-- Card 2 PORTFOLIO 
+  <div class="card" data-title="Our Portfolio" data-content="Explore our portfolio. Check out our completed projects.">
+    <img src="Assets/file-and-folder-1.png" alt="Image 2" class="card-image">
+    <h2>Portfolio</h2>
+    <p>Card description goes here.</p>
+    <span>More info</span>
+  </div>
+  <!-- Card 3 CONTACT
+  <div class="card" data-title="Contact Us" data-content="Get in touch with us. We'd love to hear from you!">
+    <img src="Assets/file-and-folder-1.png" alt="Image 3" class="card-image">
+    <h2>Contact</h2>
+    <p>Card description goes here.</p>
+    <span>More info</span>
+  </div>
+</section>
+-->
+
+<!-- Modal Structure -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <img src="Assets/cuervo-1.png" class="modal-icon left-icon" alt="modal icon">
+      <h2 class="modal-title">Modal Title</h2>
+      <span class="close-icon right-icon">X</span>
+    </div>
+    <h2></h2>
+    <p></p>
+    <form id="contactForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" required></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Modal Structure -->
+<!-- 
+<div id="myModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+  <div class="modal-content">
+    <div class="modal-header">
+      <img src="https://cdn-icons-png.flaticon.com/512/169/169367.png" alt="Sun Icon" class="modal-icon">
+      <h2 id="modalTitle">Modal Title</h2>
+      <div class="close-icons" role="button" tabindex="0" aria-label="Close modal">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828774.png" alt="Close Icon" class="close-icon">
+      </div>  
+    </div>
+    <p id="modalDescription">
+      <!-- The content will be dynamically injected here 
+    </p>
+    <form id="contactForm" style="display: none;">
+      <span class="contact-path">
+        <span class="green">natal@</span>
+        <span class="green">DESKTOP-4KOMHAV</span> 
+        <span class="violet">MINGW64</span> 
+        <span class="yellow"> ~/Desktop/portfolioNataliaDeLosRios</span>
+      </span>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+      <br><br>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+      <br><br>
+      <button type="submit">Send Message</button>
+    </form>
+    <button class="modal-button">Close</button>
+  </div>
+</div>
+*/
+-->
+
+
+
+<!-- Icon Menu Fixed 
+<div class="icon-menu-fixed">
+  <div class="container-envelope">
+      <div class="envelope-wrapper">
+          <div class="envelope">
+              <div class="letter">
+                  <div class="text">
+                      <strong>Message 1</strong>
+                      <p>This is the first message.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="envelope-wrapper">
+          <div class="envelope">
+              <div class="letter">
+                  <div class="text">
+                      <strong>Message 2</strong>
+                      <p>This is the second message.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="envelope-wrapper">
+          <div class="envelope">
+              <div class="letter">
+                  <div class="text">
+                      <strong>Message 3</strong>
+                      <p>This is the third message.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+-->
+
+
+
+
+<!-- About section -->
+<section class="about-container">
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>
+      Natalia de los Ríos is a passionate designer and full-stack developer who has been living and working remotely for the past five years. She has a strong background in graphic design and user experience (UX/UI) design, and has worked on various projects in various industries. Natalia is currently working remotely from her home office in Barcelona, Spain.
+    </p>
+    <p>
+      She is always eager to learn new skills and collaborate with like-minded individuals. Outside of her work, Natalia enjoys playing soccer, cooking, and exploring new cultures. She is also a member of a local community group and volunteers at a local animal shelter.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti numquam iusto ipsum, quia odio optio aliquam hic inventore! Rerum sapiente ipsam quasi inventore alias. Quo saepe enim officia cumque!.
+    </p>
+  </div>
+  <div class="about-image">
+    Image Placeholder
+  </div>
+</section>
+
+
+  <!-- Slider content goes here -->
+<!-- Portfolio Image Slider -->
+<section>
+  <h2 class="portfolio-title">Portfolio</h2>
+  <div class="slider-container">
+    <button class="prev">&#10094;</button> <!-- Previous arrow button -->
+    <div class="slider">
+      <!-- First Slide -->
+      <div class="slide">
+        <img src="https://via.placeholder.com/500" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>Description of project 1 goes here.</p>
+        <video controls width="500">
+          <source src="video1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Second Slide -->
+      <div class="slide">
+        <img src="https://via.placeholder.com/500" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>Description of project 2 goes here.</p>
+        <video controls width="500">
+          <source src="video2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Third Slide -->
+      <div class="slide">
+        <img src="https://via.placeholder.com/500" alt="Project 3">
+        <h3>Project 3</h3>
+        <p>Description of project 3 goes here.</p>
+        <video controls width="500">
+          <source src="video3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <button class="next">&#10095;</button> <!-- Next arrow button -->
+  </div>
+
+<!-- Portfolio Graphic Design UI/UX Book -->
+<!-- Previous Button -->
+<section class="portfolio-book"> 
+  <!-- Previous Button -->
+  <button id="prev-btn">
+    <i class="fas fa-arrow-circle-left"></i>
+</button>
+
+  <!-- Book -->
+  <div id="book" class="book">
+      <!-- Paper 1 -->
+     <div id="p1" class="paper">
+          <div class="front">
+             <div class="front-content">
+                 <h1>Front 1</h1>
+             </div>
+         </div>
+          <div class="back">
+             <div class="back-content">
+                  <h1>Back 1</h1>
+             </div>
+         </div>
+      </div>
+      <!-- Paper 2 -->
+      <div id="p2" class="paper">
+         <div class="front">
+              <div class="front-content">
+                  <h1>Front 2</h1>
+             </div>
+          </div>
+         <div class="back">
+             <div class="back-content">
+                 <h1>Back 2</h1>
+              </div>
+         </div>
+     </div>
+     <!-- Paper 3 -->
+      <div id="p3" class="paper">
+         <div class="front">
+             <div class="front-content">
+                  <h1>Front 3</h1>
+              </div>
+         </div>
+         <div class="back">
+             <div class="back-content">
+                  <h1>Back 3</h1>
+             </div>
+         </div>
+      </div>
+  </div>
+
+  <!-- Next Button -->
+  <button id="next-btn">
+     <i class="fas fa-arrow-circle-right"></i>
+  </button>
+</section>
+
+
+
+<!-- Contact Form -->
+<section id="contact" class="contact-section">
+  <h2 class="contact-title">Let's Get in Touch</h2>
+  <p class="contact-subtitle">Feel free to reach out to me by filling out the form below</p>
+  
+  <div class="contact-form-container">
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+  </div>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>

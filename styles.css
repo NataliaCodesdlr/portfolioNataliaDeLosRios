@@ -1,0 +1,1192 @@
+/* General styling */
+
+/* Default theme (light mode) */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --card-background-color: #ffffff;
+    --card-text-color: #333333;
+    --primary: #fff;
+    --bg-color: rgb(5, 53, 61);
+    --bg-envelope-color: #f5edd1;
+    --envelope-tab: #ecdeb8;
+    --envelope-cover: #e6cfa7;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --txt-color: #444;
+    --green: #00ff00;
+    --violet: #8a2be2; /* Adjust the color as needed */
+    --yellow: #ffff00;
+    --contact-path-padding: 10px; /* Space around the contact path */
+    --icon-fill: #000000; /* Default icon color for light mode */
+  }
+  
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+/* Dark Mode Variables */
+body.dark-mode {
+  --background-color: #333333;
+  --text-color: #ffffff;
+  --card-background-color: #444444;
+  --card-text-color: #dddddd;
+  --icon-fill: #ffffff; /* White color for icon fill in dark mode */
+}
+  
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  
+    body.light-mode {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+    
+  /* Dark mode theme */
+  body.dark-mode {
+    --background-color: #333333;
+    --text-color: #ffffff;
+    --card-background-color: #444444;
+    --card-text-color: #dddddd;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .card.dark-mode {
+  
+  }
+  
+  .toggle-theme {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Example of how card styling might change */
+.card {
+  background-color: var(--card-background-color);
+  color: var(--card-text-color);
+}
+
+/* Adjust card image for dark mode */
+.card-image {
+  fill: var(--icon-fill); /* Adjust the image fill color in dark mode */
+}
+  
+  .icon-sun,
+  .icon-moon {
+    width: 24px;
+    height: 24px;
+  }
+    
+    /* Navbar Styling */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px;
+      z-index: 1000;
+      display: flex;
+      justify-content: center; /* Center all navbar content */
+      align-items: center;
+      gap: 20px; /* Space between the navbar items */
+    }
+    
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+  
+    .navbar li {
+      margin: 0 15px;
+    }
+    
+    .navbar a {
+      color: white;
+      font-weight: bold;
+      padding: 8px 16px;
+      transition: background-color 0.3s;
+    }
+    
+    .navbar a:hover {
+      background-color: #555;
+      border-radius: 4px;
+    }
+    
+    /* Search Form Styling */
+   .search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    
+    .search-form input {
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      margin-right: 5px;
+    }
+    
+    .search-form button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .search-form button img {
+      width: 20px;
+      height: 20px;
+    }
+    
+    /* Hero Section Styling */
+    .hero {
+      margin-top: 60px; /* to accommodate for the fixed navbar */
+      background-color: #f4f4f4;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      color: #666;
+    }
+    
+    /* Cards Section */
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px;
+      background-color: #fafafa;
+      gap: 20px;
+    }
+    
+    .card {
+      background-color: var(--card-background-color);
+      color: var(--card-text-color);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s;
+      flex: 1 1 calc(25% - 20px); /* 4 cards per row */
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+/* Card image: Smooth transition for image change */
+.card-image {
+  transition: opacity 0.2s ease-in-out; /* Smooth transition */
+}
+
+.card-image:hover {
+  opacity: 0.7; /* Or any other hover effect you want */
+  /* If changing the image, use this to swap */
+  content: url('Assets/new-hover-icon.png'); /* Add your hover icon here */
+}   
+
+    .card h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    
+    .card p {
+      font-size: 1em;
+      color: #666;
+    }
+    
+    .card span {
+      display: block;
+      margin-top: 10px;
+      color: #007BFF;
+      cursor: pointer;
+    }
+    
+    .card span:hover {
+      text-decoration: underline;
+    }
+    
+    /* Modal Styling */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1001;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    }
+    
+    .modal-content {
+      background-color: white;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+    }
+
+.modal .modal-content ul {
+  list-style-type: none; /* Removes the default dots */
+  padding-left: 0; /* Aligns the list flush with the left */
+}
+
+.modal .modal-content ul li {
+  position: relative;
+  padding-left: 20px; /* Space for the custom decoration */
+}
+
+.modal .modal-content ul li::before {
+  content: '•'; /* Replaces the dot with a custom symbol, like a bullet point */
+  position: absolute;
+  left: 0;
+  color: transparent; /* Custom color for the bullet point */
+  font-size: 1.5em; /* Adjusts size of the bullet */
+  line-height: 1.2; /* Line height for better alignment */
+}
+    
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 20px; /* Reduced padding to bring the header closer to the top */
+      border-bottom: 1px solid #ccc;
+      margin: 0; /* Ensure there's no margin */
+      padding: 0;
+    }
+    
+    .modal-header h2 {
+      flex-grow: 1;
+      text-align: center;
+      margin: 0;
+      font-size: 1.2em; /* Smaller font size */
+    }
+    
+    .modal-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 20px;
+    }
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between; /* Spread items across the header */
+  align-items: center; /* Vertically center the items */
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  border-bottom: none; /* Remove any bottom border from header */
+  box-shadow: none; /* Remove any shadow */
+}
+
+/* Modal content */
+.modal-content {
+  border: none; /* Remove any borders from the modal content */
+  box-shadow: none; /* Remove shadow if applied */
+}
+
+/* Center the modal title without underline or borders */
+.modal-header .modal-title {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%); /* Center the title horizontally */
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #fff; /* Customize title color */
+  text-decoration: none; /* Remove any underline */
+  border: none; /* Remove any border */
+}
+
+/* Remove any HR (horizontal line) that could be added */
+.modal-header hr {
+  display: none;
+}
+
+
+/* For the "About Me" and "Portfolio" modals */
+.modal-content:not(.contact-modal) .modal-title {
+  color: #333; /* Dark color for better contrast on light backgrounds */
+}
+
+/* For the "Contact" modal (already correct, but to ensure specificity) */
+.modal-content.contact-modal .modal-title {
+  color: #fff; /* Keep the title white for dark background */
+}
+
+
+
+
+/* Styles for the Send button */
+.modal-content.contact-modal button {
+  background-color: #333;/* Dark grey background */
+  color: #fff; /* White text for contrast */
+  border: none; /* Remove any default border */
+  outline: none; /* Remove any default outline */
+  border-radius: 5px; /* Optional: for rounded corners */
+  padding: 10px 20px; /* Padding for better appearance */
+  margin: 10px auto; /* Center the button */
+  display: block; /* Make it a block element to center */
+  cursor: pointer; /* Change cursor to pointer */
+  appearance: none; /* Reset button appearance for consistency */
+}
+
+/* Optional: Add hover effect */
+.modal-content.contact-modal button:hover {
+  background-color: #555; /* Slightly lighter grey on hover */
+}
+
+
+
+
+/* About Modal Text Styles */
+.modal-content p {
+  font-size: 1.2em; /* Increase the paragraph text size */
+  line-height: 1.4;  /* Adjust line height for better readability */
+}
+
+.modal-content ul {
+  font-size: 1em; /* Increase the list text size */
+  line-height: 1.6;  /* Add spacing between list items */
+}
+
+.modal-content ul li {
+  margin-bottom: 10px; /* Add some space between the list items */
+}
+
+.about-phrase {
+  font-size: 5em; !important /* Increase the about phrase size */
+  color: #666; /* Darker text color */
+}
+
+  
+/*Modal Close Icons*/
+    .close-icons {
+      display: flex;
+      align-items: center;
+    }
+    
+    .close {
+      font-size: 30px;
+      cursor: pointer;
+    }
+    
+
+/* Close Icon Styling - Bigger */
+.close-icon {
+  width: 24px;  /* Adjust size */
+  height: 24px; /* Adjust size */
+  cursor: pointer; /* Makes the icon clickable */
+  position: absolute;
+  top: 10px;  /* Adjust to align properly */
+  right: 10px; /* Adjust to align properly */
+}
+
+/* Modal header styling */
+.modal-header {
+  display: flex;
+  justify-content: space-between; /* Spread items across the header */
+  align-items: center; /* Vertically center the items */
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+/* Left icon styling */
+.modal-header .left-icon {
+  position: absolute;
+  left: 10px;  /* Adjust to align properly */
+  top: 10px;
+  width: 40px;  /* Adjust size */
+  height: auto;
+}
+
+/* Center the modal title */
+.modal-header .modal-title {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%); /* Center the title horizontally */
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #fff; /* Customize title color */
+}
+
+/* Specific styling for the contact modal to make icon white */
+.modal-content.contact-modal .left-icon {
+  filter: brightness(0) invert(1); /* Make the icon white */
+}
+
+
+
+    /*
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+      */
+
+    
+    .modal video {
+      margin-top: 20px;
+    }
+    
+    .modal-button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .modal-button:hover {
+      background-color: #0056b3;
+    }
+    
+    /* Responsive for Mobile */
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+    
+/* About Icons - Ensure Size */
+.about-icon {
+  width: 80px !important; /* Force the width */
+  height: 80px !important; /* Force the height */
+  object-fit: contain; /* Ensure the image fits within the defined size */
+}
+
+
+
+/* About Icons and List Items */
+.about-list {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+.about-list li {
+  display: flex;
+  align-items: center; /* Vertically centers icon and text */
+  margin-bottom: 15px; /* Space between items */
+}
+
+.about-list li img {
+  width: 40px; /* Icon size */
+  height: 40px;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.about-list li span {
+  text-align: center;
+  font-size: 1.2em; /* Adjust font size */
+  flex-grow: 1; /* Ensures the text takes up remaining space and centers */
+}
+
+
+/* Modal Hand Wave Animation */
+/* Hand Wave Animation */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(15deg); }
+  80% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+#waveHand {
+  display: inline-block;
+  transform-origin: 70% 70%; /* Adjust the origin for a realistic wave */
+  cursor: pointer;
+}
+
+#waveHand:hover {
+  animation: wave 1s ease-in-out infinite; /* Infinite loop while hovering */
+}
+
+
+
+
+/* Form styling inside the modal */
+/* Add styles for the contact path */
+.contact-path {
+  padding: var(--contact-path-padding);
+  border: 1px solid var(--bg-color); /* Add border if needed */
+  display: inline-block; /* Ensure the padding is applied correctly */
+  /*background-color: var(--bg-envelope-color);  Adjust background if needed */
+}
+
+.green {
+  color: var(--green);
+}
+
+.violet {
+  color: var(--violet);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+
+
+#contactForm {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  #contactForm input,
+  #contactForm textarea {
+    width: 100%;
+    padding: 15px; /* Add padding */
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #111; /* Black background */
+    color: #00ff00; /* Green text */
+  }
+  
+  #contactForm button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #contactForm button:hover {
+    background-color: #0056b3;
+  }
+
+/* Contact Modal Terminal */
+.modal-content.contact-modal {
+  background-color: #000; /* Black background */
+  color: #00ff00; /* Green text */
+  border-radius: 8px; /* Rounded corners for the modal */
+  padding: 20px; /* Add padding around the content */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.modal-content.contact-modal h2 {
+  color: #fff; /* Keep header white */
+  margin-bottom: 15px; /* Add margin for spacing */
+}
+
+.modal-content.contact-modal input,
+.modal-content.contact-modal textarea {
+  background-color: #111; /* Dark background for inputs */
+  color: #00ff00; /* Green text */
+  border: 1px solid #00ff00; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners for inputs */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Add focus styles for inputs */
+.modal-content.contact-modal input:focus,
+.modal-content.contact-modal textarea:focus {
+  outline: none; /* Remove default outline */
+  border-color: #00cc00; /* Change border color on focus */
+}
+
+.modal-content.contact-modal button {
+  background-color: #00ff00; /* Green button */
+  color: #000; /* Black text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Add padding for button */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+/* Change button color on hover */
+.modal-content.contact-modal button:hover {
+  background-color: #00cc00; /* Slightly darker green on hover */
+}
+
+/* Targeting inputs specifically for the "Contact" modal */
+.modal-content.contact-modal #contactForm input,
+.modal-content.contact-modal #contactForm textarea {
+  width: 80%; /* Increase input width for better usability */
+  max-width: 400px; /* Adjust max width */
+  margin: 10px auto; /* Center the inputs */
+  display: block;
+  padding: 10px; /* Maintain padding for better UX */
+}
+
+/* Adjust textarea height if necessary */
+.modal-content.contact-modal #contactForm textarea {
+  height: 120px; /* Increase height of the textarea */
+}
+
+
+
+
+/* Positioning the computer icon */
+.modal-computer-icon {
+  position: absolute; /* Position it absolutely */
+  top: 10px; /* Adjust top margin as needed */
+  left: 10px; /* Align to the left */
+  width: 30px; /* Set width for the icon */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for the three words */
+.three-words {
+  display: flex; /* Use flex to align items */
+  margin-top: 10px; /* Space between header and words */
+}
+
+.green-text {
+  color: var(--green); /* Use CSS variable for green */
+}
+
+.violet-text {
+  color: var(--violet); /* Use CSS variable for violet */
+}
+
+.yellow-text {
+  color: var(--yellow); /* Use CSS variable for yellow */
+}
+
+
+
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Slide */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.slide h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.slide p {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Arrow Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  background-color: #f9f9f9;
+  gap: 30px;
+}
+
+.about-container h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+.about-container p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-text {
+  flex: 2;
+  padding-right: 30px;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 300px;
+  border-radius: 10px;
+  background-color: #ddd;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Portfolio Section */
+/* Center Portfolio Title */
+.portfolio-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background-color: #fafafa;
+  position: relative;
+  max-width: 600px; /* Set maximum width */
+  margin: 0 auto; /* Center the slider container */
+  overflow: hidden;
+  border-radius: 8px;
+  text-align: center; /* Center the text inside the slider */
+}
+
+.slider-container h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+/* Slide */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.slide {
+  min-width: 100%; /* Each slide takes full width */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content inside each slide */
+  justify-content: center; /* Center vertically if content height is smaller */
+  text-align: center; /* Ensure text is centered */
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-width: 500px; /* Limits the size of the image */
+}
+
+/* Video Styling */
+.slide video {
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* Title and Description Styles */
+.slide h3 {
+  margin-top: 10px;
+  font-size: 1.8em; /* Consistent title size */
+}
+
+.slide p {
+  font-size: 1.2em; /* Consistent description size */
+  color: #555;
+}
+
+/* Arrow Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 2em; /* Larger button size */
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Portfolio Title and Graphic Design UI/UX Book */
+/* Book styling */
+/* General Styles for Book Section */
+/* Book Section */
+.portfolio-book {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: powderblue;
+}
+
+/* Book */
+.book {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  perspective: 1500px; /* Perspective for 3D effect */
+}
+
+/* Paper */
+.paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s;
+}
+
+/* Front and Back Pages */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden; /* Prevents back from showing when flipped */
+}
+
+.front {
+  z-index: 2; /* Higher z-index for the front page */
+  background-color: white;
+  border-left: 3px solid powderblue; /* Border for the front page */
+}
+
+.back {
+  z-index: 1; /* Lower z-index for the back page */
+  transform: rotateY(180deg); /* Flips the back page */
+  background-color: lightyellow; /* Background color for back page */
+}
+
+/* Content Alignment */
+.front-content,
+.back-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flipping Animation */
+.flipped .front {
+  transform: rotateY(-180deg); /* Flips the front page */
+}
+
+.flipped .back {
+  transform: rotateY(0deg); /* Shows the back page */
+}
+
+/* Controller Buttons */
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 24px; /* Adjust button size */
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover i {
+  color: #636363; /* Change icon color on hover */
+}
+
+i {
+  font-size: 50px; /* Icon size */
+  color: gray; /* Icon color */
+}
+
+/* Positioning buttons */
+#prev-btn {
+  position: absolute;
+  left: 10px; /* Position left */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center alignment */
+}
+
+#next-btn {
+  position: absolute;
+  right: 10px; /* Position right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center alignment */
+}
+
+
+
+/* Dark Mode Styles (if applicable) */
+.dark-mode .book {
+  background-color: #333; /* Darker background for the book in dark mode */
+}
+
+.dark-mode .paper {
+  background-color: #444; /* Darker pages in dark mode */
+}
+
+
+
+
+/* Contact Section Container */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Contact Title Styling */
+.contact-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* Contact Subtitle */
+.contact-subtitle {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Input and Textarea Styling */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: #008cba; /* Focus state color */
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #008cba;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #005f87; /* Hover color */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 20px;
+  }
+
+  .contact-title {
+    font-size: 2em;
+  }
+
+  .contact-subtitle {
+    font-size: 1em;
+  }
+}
+
+/* Close button styling */
+.close-icon {
+  color: black; /* Default color */
+}
+
+.contact-modal .close-icon {
+  color: white; /* Change color in Contact modal */
+}
+
+
+/* Icon Menu Fixed */
+.icon-menu-fixed {
+  position: fixed;
+  top: 50%; /* Position in the center vertically */
+  left: 0; /* Align to the left */
+  transform: translateY(-50%); /* Center it vertically */
+  z-index: 1000; /* Keep it on top */
+  background: var(--bg-color);
+  width: 300px; /* Width of the icon menu */
+  padding: 20px; /* Add padding around the envelopes */
+}
+
+/* Envelope container styles */
+.container-envelope {
+  display: flex;
+  flex-direction: column; /* Stack envelopes vertically */
+}
+
+/* Envelope wrapper styles */
+.envelope-wrapper {
+  position: relative;
+  cursor: pointer;
+  margin: 15px 0; /* Space between envelopes */
+}
+
+/* Envelope styles */
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 230px;
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-top: 130px solid var(--envelope-tab);
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.5s ease-in-out;
+}
+
+.envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-top: 130px solid transparent;
+  border-right: 150px solid var(--envelope-cover);
+  border-bottom: 100px solid var(--envelope-cover);
+  border-left: 150px solid var(--envelope-cover);
+}
+
+.letter {
+  position: absolute;
+  right: 20%;
+  bottom: 10%; /* Position the letter inside the envelope */
+  width: 54%;
+  height: 80%;
+  background: var(--primary);
+  text-align: center;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 5px var(--shadow-color);
+  padding: 20px 10px;
+  z-index: 1; /* Keep it inside the envelope */
+  transform: translateY(30px); /* Initial position inside the envelope */
+}
+
+/* Flap Animation */
+.flap .envelope::before {
+  transform: rotateX(180deg);
+}
+
+.flap .letter {
+  bottom: 100px; /* Move above the envelope when flapped */
+  transform: translateY(0) scale(1.2); /* Move up and scale slightly */
+  transition: all 1s ease-in-out; /* Duration for smoother animation */
+  z-index: 4; /* Higher z-index for the letter when flapped */
+}
