@@ -16,7 +16,6 @@ function openModal(title, description, showForm = false) {
     modalTitle.textContent = title;
     modalDescription.innerHTML = ''; // Clear previous content
 
-    // Set specific content based on the modal title
     if (title === "Contact") {
         modalDescription.innerHTML = `
             <p class="contact-phrase">Let's Get In Touch!</p>
@@ -25,7 +24,6 @@ function openModal(title, description, showForm = false) {
             <span class="color-word" style="color: var(--yellow);">~/Desktop/portfolioNataliaDeLosRios</span>
         `;
 
-        // Add input fields to the contact form
         contactForm.innerHTML = `
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Enter your name" required>
@@ -38,6 +36,9 @@ function openModal(title, description, showForm = false) {
             <button type="submit">Send</button>
         `;
         contactForm.style.display = "block"; // Show the contact form
+
+        // Add class for Contact modal to style the close button icon
+        modalContent.classList.add("contact-modal");
     } else if (title === "Portfolio") {
         modalDescription.innerHTML = `
             <p>${description}</p>
@@ -52,10 +53,12 @@ function openModal(title, description, showForm = false) {
             </div>
         `;
         contactForm.style.display = "none"; // Hide the contact form for portfolio modal
+        modalContent.classList.remove("contact-modal"); // Remove the class if not contact modal
         initSlider(); // Initialize the slider functionality
     } else {
         modalDescription.innerHTML = description; // Default description for "About" modal
         contactForm.style.display = "none"; // Hide the contact form for other modals
+        modalContent.classList.remove("contact-modal"); // Remove the class if not contact modal
     }
 
     modal.style.display = "block"; // Show the modal

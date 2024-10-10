@@ -398,14 +398,21 @@ body.dark-mode {
     }
     
 
-/* Close Icon Styling - Bigger */
+/* Close Icon Styling */
+/* Styling for the new close button */
+/* Default close icon style */
 .close-icon {
-  width: 24px;  /* Adjust size */
-  height: 24px; /* Adjust size */
-  cursor: pointer; /* Makes the icon clickable */
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
   position: absolute;
-  top: 10px;  /* Adjust to align properly */
-  right: 10px; /* Adjust to align properly */
+  top: 10px;
+  right: 10px;
+}
+
+/* Specific styling for the close icon in the Contact modal */
+.contact-modal .close-icon {
+  filter: brightness(0) invert(1); /* Makes the icon white or light on dark background */
 }
 
 /* Modal header styling */
